@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    /* progress模块 */
+    .progress {
+        border: 1px solid #eee;
+        border-radius: 3px;
+        height: 15px;
+        background: #fff;
+        margin-top: 5px;
+        display: block;
+    }
+
+        .progress .percentage {
+            text-align: center;
+            position: relative;
+            display: block;
+            z-index: 100;
+            height: 15px;
+            line-height: 15px;
+        }
+
+        .progress .bar {
+            background: #0088C0;
+            height: 15px;
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: -2px;
+            z-index: -1;
+        }
+
+    .progress_warning .bar {
+        background: #FAA732;
+    }
+
+    .progress_info .bar {
+        background: #5EB95E;
+    }
+
+    .progress_danger .bar {
+        background: #dd514c;
+    }
+</style>
+
+<h2>Index</h2>
+     
+    <link href="~/Scripts/webuploader/webuploader.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/webuploader/webuploader.js"></script>
+    <script src="~/Scripts/powerWebUpload.js"></script>
+
+
+    <div id="uploader">
+
+    </div>
+<input type="text" name="name" id="uploaderinput" value=" " />
+    <div>123</div>
+    <div id="uploader2">
+
+    </div>
+    <input type="hidden" name="uploadhidden" id="uploadhidden" />
+    <input type="hidden" name="uploadhidden2" id="uploadhidden2" />
+
+
+
+    <script>
+        $(function () {
+            $("#uploader").powerWebUpload({
+                hiddenInputId: "uploadhidden",
+                fileNumLimit: 1,
+                inputvalue: 'uploaderinput'
+            });
+            $("#uploader2").powerWebUpload({
+                hiddenInputId: "uploadhidden2",
+                PostbackHold: true,
+                ShowDownload: true
+            });
+        })
+    </script>

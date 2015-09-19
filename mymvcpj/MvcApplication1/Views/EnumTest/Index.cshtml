@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var item in ViewBag.mmm)
+{
+    <input type="radio" name="name" value="@item" />@ViewBag.mmm[@item]
+
+}
+
