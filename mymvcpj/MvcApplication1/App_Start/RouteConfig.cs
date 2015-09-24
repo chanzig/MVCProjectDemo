@@ -16,7 +16,7 @@ namespace MvcApplication1
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "EnumTest", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "ValidateCode", action = "VCode", id = UrlParameter.Optional }
             );
         }
     }

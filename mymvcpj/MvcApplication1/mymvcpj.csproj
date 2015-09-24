@@ -118,6 +118,7 @@
     <Compile Include="Common\EnumHelper.cs" />
     <Compile Include="Controllers\EnumTestController.cs" />
     <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\ValidateCodeController.cs" />
     <Compile Include="Controllers\WebUploaderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,6 +171,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\EnumTest\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ValidateCode\VCode.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ValidateCode\GetValidateCode.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

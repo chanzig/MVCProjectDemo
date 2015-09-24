@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "VCode";
+}
+
+<h2>VCode</h2>
+
+<h2>GetValidateCode</h2>
+<script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<form action="/validatecode/VCodePost" method="post">
+    <img id="valiCode" style="cursor: pointer;" src="/validatecode/getvalidatecode" alt="验证码" />
+    <input type="validateCode" name="validateCode" value=" "/>
+    @Html.ValidationMessage("error1")
+    <button type="submit">tijiao</button>
+</form>
+    
+
+
+<script>
+    $(function () {
+        $("#valiCode").bind("click", function () {
+            this.src = "/validatecode/getvalidatecode?time=" + (new Date()).getTime();
+        });
+    });
+</script> 
